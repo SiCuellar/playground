@@ -12,3 +12,13 @@ server.on('close', function() { //we listen to the close event
 server.listen(8080); // start the server
 
 server.close(); //stops the server.  Trigers the close event
+
+
+
+
+
+
+//var server = http.createServer();
+//server.on('request', function(req, res) { });
+//--------------is the same as 
+//var server = http.createServer(function(req, res) { });
