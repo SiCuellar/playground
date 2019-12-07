@@ -19,6 +19,10 @@ my_car = Car('red', 54324)
 print(my_car)
 
 
+# how containers convert child objects to string
+# calling __str__ will represent the interior objects with the __repr__ function
+
+
 
 #---------------------------------------------------------------------
 # import datetime
