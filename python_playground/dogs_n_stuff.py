@@ -7,5 +7,10 @@ class Dog:
 
 philo = Dog("Philo", 5)
 mikey = Dog("Mikey",6)
+mikey.age = 7
+philo.species = "mouse"
 
 print("{} is {} and {} is {}".format(philo.name, philo.age, mikey.name, mikey.age))
+
+if philo.species == "mammal":
+    print("{} is a {}".format(philo.name, philo.species))
