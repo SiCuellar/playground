@@ -3,25 +3,31 @@
 #__str__ -----> is used to give an easy, human consumption
 #__repr__ -----> unanbiguous, valid python, more developers
 
-import datetime
-today = datetime.date.today()
+# add __repr__ to any class that you define is good practice
 
-print(str(today))     #---> 2019-12-07
-print(repr(today))    #---> datetime.date(2019, 12, 7)
+class Car:
+    def __init__(self, color, milage):
+        self.color = color
+        self.milage = milage
+
+    def __repr__(self):
+        return('{self.__class__.__name__}({self.color}, {self.milage})'.format(self=self))
+        # return('Car({self.color}, {self.milage})'.format(self=self))
+
+
+my_car = Car('red', 54324)
+print(my_car)
 
 
 
-# class Car:
-#     def __init__(self, color, milage):
-#         self.color = color
-#         self.milage = milage
+#---------------------------------------------------------------------
+# import datetime
+# today = datetime.date.today()
 #
-#     def __repr__(self):
-#         return '__repr__ for Car'
-#
-#     def __str__(self):
-#         return '__str__ for Car'
-#
+# print(str(today))     #---> 2019-12-07
+# print(repr(today))    #---> datetime.date(2019, 12, 7)
+#-----------------------------------------------------------------------
+
 
 
 #__repr__ ----> shows this when the object is inspected
