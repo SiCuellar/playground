@@ -1,25 +1,31 @@
-class Car:
-    def __init__(self, color, milage):
-        self.color = color
-        self.milage = milage
+#__str__ vs __repr__
 
-    def __repr__(self):
-        return '__repr__ for Car'
+#__str__ -----> is used to give an easy, human consumption
+#__repr__ -----> unanbiguous, valid python, more developers
 
-    def __str__(self):
-        return '__str__ for Car'
+import datetime
+today = datetime.date.today()
 
-my_car = Car('red', 5432)
-print(my_car)
+print(str(today))     #---> 2019-12-07
+print(repr(today))    #---> datetime.date(2019, 12, 7)
+
+
+
+# class Car:
+#     def __init__(self, color, milage):
+#         self.color = color
+#         self.milage = milage
+#
+#     def __repr__(self):
+#         return '__repr__ for Car'
+#
+#     def __str__(self):
+#         return '__str__ for Car'
+#
 
 
 #__repr__ ----> shows this when the object is inspected
 # repr(my_car)
-
-
-
-
-
 
 
 # dunder str or __str__ converts objects into strings -- pythonic way of doing this
