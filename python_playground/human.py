@@ -32,3 +32,7 @@ person.action()
 baby = Baby("max", 2)
 baby.speak()
 baby.nap()
+
+print(isinstance(baby, Person))
+print(isinstance(baby, object))
+print(isinstance(baby, Baby))
