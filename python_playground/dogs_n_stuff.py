@@ -5,12 +5,20 @@ class Dog:
         self.name = name
         self.age = age
 
-philo = Dog("Philo", 5)
-mikey = Dog("Mikey",6)
-mikey.age = 7
-philo.species = "mouse"
+    def description(self):
+        return "{} is {} years old".format(self.name, self.age)
 
-print("{} is {} and {} is {}".format(philo.name, philo.age, mikey.name, mikey.age))
+    def speak(self, sound):
+        return "{} says {}".format(self.name, sound)
 
-if philo.species == "mammal":
-    print("{} is a {}".format(philo.name, philo.species))
+    def birthday(self):
+        self.age +=1
+
+
+
+
+mikey = Dog("Mikey", 6)
+print(mikey.description())
+print(mikey.speak("bark bark"))
+mikey.birthday()
+print(mikey.description())
