@@ -25,3 +25,4 @@ class Cube(Square):
 
 cube = Cube(3)
 print(cube.surface_area())
+print(cube.volume())
