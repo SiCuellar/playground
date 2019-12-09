@@ -24,6 +24,20 @@ class Cube(Square):
         face_area = super().area()
         return face_area * self.length
 
-cube = Cube(3)
-print(cube.surface_area())
-print(cube.volume())
+class Triangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return 0.5 * self.base * self.height
+
+class RightPyramid(Triangle, Square):
+    def __init__(self, base, slant_hight):
+        self.base = base
+        self.slant_hight = slant_hight
+
+    def area(self):
+        base_area = super().area()
+        perimeter = super().perimeter()
+        return 0.5 * perimeter * self.slant_height + base_area
